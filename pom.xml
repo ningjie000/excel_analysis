@@ -7,7 +7,7 @@
     <groupId>com.ning.excel</groupId>
     <artifactId>excel_analysis</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <packaging>jar</packaging>
 
     <dependencies>
 <!--        阿里excel包-->
@@ -34,5 +34,56 @@
         </dependency>
 
     </dependencies>
+
+<!--    <parent>-->
+<!--        <groupId>org.sonatype.oss</groupId>-->
+<!--        <artifactId>oss-parent</artifactId>-->
+<!--        <version>7</version>-->
+<!--    </parent>-->
+
+    <name>com.gitee.sunchenbin.mybatis.actable:mybatis-enhance-actable</name>
+    <description>A.CTable is a Maven project based on Spring and Mybatis, which enhances the function of Mybatis</description>
+    <url>https://gitee.com/sunchenbin/mybatis-enhance</url>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>actable</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>ningjie</name>
+            <email>1248140641@qq.com</email>
+            <organization>ningjie</organization>
+            <url>https://github.com/ningjie000/excel_analysis</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>https://github.com/ningjie000/excel_analysis.git</connection>
+        <developerConnection>https://github.com/ningjie000/excel_analysis.git</developerConnection>
+        <url>https://github.com/ningjie000/excel_analysis</url>
+        <tag>master</tag>
+    </scm>
+    <distributionManagement>
+        <snapshotRepository>
+            <!-- 这个id需要在setting.xml中设置  -->
+            <id>oss</id>
+            <name>OSS Snapshots Repository</name>
+            <!-- 这里的url就是Issue中回复的snapshots 的repo地址-->
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>oss</id>
+            <name>OSS Staging Repository</name>
+            <!-- 这里的url就是Issue中回复的staging 的repo地址-->
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+
 
 </project>

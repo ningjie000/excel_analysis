@@ -21,8 +21,6 @@ import java.util.List;
 
 /**
  * @author NJ
- * @date 2019/10/20
- * @description
  */
 public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
 
@@ -138,12 +136,26 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
         return alldata;
     }
 
+
+    /**
+     * 是否根据第一行数据，即head数来限制读取的列数
+     */
+    private boolean isLimitColumnNum = false;
+
+
+    /**
+     * 需要限制的列数
+     */
+    private Integer limitColumnNum = null;
+
+
+
     /**
      * 遍历工作簿中所有的电子表格
      * 并缓存在mySheetList中
      *
-     * @param filename
-     * @throws Exception
+     * @param filename 文件名
+     * @throws Exception 异常
      */
     public int process(String filename) throws Exception {
         filePath = filename;
@@ -170,11 +182,11 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
     /**
      * 第一个执行
      *
-     * @param uri
-     * @param localName
-     * @param name
-     * @param attributes
-     * @throws SAXException
+     * @param uri uri
+     * @param localName localName
+     * @param name 行name
+     * @param attributes attributes xml元素
+     * @throws SAXException 解析异常
      */
     @Override
     public void startElement(String uri, String localName, String name, Attributes attributes) throws SAXException {
@@ -221,10 +233,10 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
      * 如果单元格类型是字符串、INLINESTR、数字、日期，lastIndex则是索引值
      * 如果单元格类型是布尔值、错误、公式，lastIndex则是内容值
      *
-     * @param ch
-     * @param start
-     * @param length
-     * @throws SAXException
+     * @param ch 字符
+     * @param start 开始索引
+     * @param length 长度
+     * @throws SAXException 解析异常
      */
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
@@ -235,10 +247,10 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
     /**
      * 第三个执行
      *
-     * @param uri
-     * @param localName
-     * @param name
-     * @throws SAXException
+     * @param uri uri
+     * @param localName  localName
+     * @param name xml标签名
+     * @throws SAXException 解析异常
      */
     @Override
     public void endElement(String uri, String localName, String name) throws SAXException {
@@ -321,7 +333,7 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
     /**
      * 处理数据类型
      *
-     * @param attributes
+     * @param attributes attributes节点
      */
     public void setNextDataType(Attributes attributes) {
         nextDataType = CellDataType.NUMBER; //cellType为空，则表示该单元格类型为数字
@@ -367,7 +379,7 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
      *                value代表解析：BOOL的为0或1， ERROR的为内容值，FORMULA的为内容值，INLINESTR的为索引值需转换为内容值，
      *                SSTINDEX的为索引值需转换为内容值， NUMBER为内容值，DATE为内容值
      * @param thisStr 一个空字符串
-     * @return
+     * @return 解析后的值
      */
     @SuppressWarnings("deprecation")
     public String getDataValue(String value, String thisStr) {
@@ -419,6 +431,12 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
         return thisStr;
     }
 
+    /**
+     * 当前标签和前一个标签相隔距离
+     * @param ref 当前标签名
+     * @param preRef 前一个标签名
+     * @return 当前标签和前一个标签相隔距离
+     */
     public int countNullCell(String ref, String preRef) {
         //excel2007最大行数是1048576，最大列数是16384，最后一列列名是XFD
         String xfd = ref.replaceAll("\\d+", "");
