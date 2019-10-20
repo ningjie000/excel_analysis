@@ -1,9 +1,9 @@
 package com.constant;
 
 /**
- * @author qjwyss
- * @date 2018/9/19
- * @description EXCEL常量类
+ * @author NJ
+ * @date 2019/10/20
+ * @description
  */
 public class ExcelConstant {
 

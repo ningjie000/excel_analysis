@@ -20,25 +20,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author qjwyss
- * @date 2018/12/19
- * @description 读取EXCEL辅助类
+ * @author NJ
+ * @date 2019/10/20
+ * @description
  */
 public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
 
-//    private ExcelReadDataDelegated excelReadDataDelegated;
-//
-//    public ExcelReadDataDelegated getExcelReadDataDelegated() {
-//        return excelReadDataDelegated;
-//    }
-//
-//    public void setExcelReadDataDelegated(ExcelReadDataDelegated excelReadDataDelegated) {
-//        this.excelReadDataDelegated = excelReadDataDelegated;
-//    }
-//
-//    public ExcelXlsxReaderWithDefaultHandler(ExcelReadDataDelegated excelReadDataDelegated) {
-//        this.excelReadDataDelegated = excelReadDataDelegated;
-//    }
 
     /**
      * 单元格中的数据可能的数据类型

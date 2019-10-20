@@ -2,22 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9e94017-19eb-49c3-91c4-ac9ce87ddbe3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/excel_analysis.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/constant/ExcelConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/utils/ExcelReaderUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/read/ReadTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/write/WriteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/constant/ExcelConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/constant/ExcelConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/ExcelReaderUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/ExcelReaderUtil.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,12 +35,19 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.utils" />
       <recent name="com.handle" />
       <recent name="com.constant" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\IdeaProjects\excel_analysis\src\test\java" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -51,7 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ReadTest.testRead1">
     <configuration name="ExcelReaderUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.utils.ExcelReaderUtil" />
       <module name="excel_analysis" />
@@ -65,8 +76,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ReadTest.testRead1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="excel_analysis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.read.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.read" />
+      <option name="MAIN_CLASS_NAME" value="com.read.ReadTest" />
+      <option name="METHOD_NAME" value="testRead1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ReadTest.testRead1" />
         <item itemvalue="Application.ExcelReaderUtil" />
       </list>
     </recent_temporary>
@@ -81,8 +109,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571496065710</updated>
-      <workItem from="1571496068580" duration="2086000" />
+      <workItem from="1571496068580" duration="6289000" />
     </task>
+    <task id="LOCAL-00001" summary="添加sax解析xlsx文件">
+      <created>1571499568622</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571499568622</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,5 +134,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="添加sax解析xlsx文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加sax解析xlsx文件" />
   </component>
 </project>
