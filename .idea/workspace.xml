@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9e94017-19eb-49c3-91c4-ac9ce87ddbe3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/constant/ExcelConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/constant/ExcelConstant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/ExcelReaderUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/ExcelReaderUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/read/ReadTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/write/WriteTest.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +73,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ReadTest.testRead1">
+  <component name="RunManager" selected="Application.ExcelReaderUtil">
     <configuration name="ExcelReaderUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.utils.ExcelReaderUtil" />
       <module name="excel_analysis" />
@@ -110,8 +105,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ReadTest.testRead1" />
         <item itemvalue="Application.ExcelReaderUtil" />
+        <item itemvalue="JUnit.ReadTest.testRead1" />
       </list>
     </recent_temporary>
   </component>
@@ -125,7 +120,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571496065710</updated>
-      <workItem from="1571496068580" duration="20575000" />
+      <workItem from="1571496068580" duration="24623000" />
     </task>
     <task id="LOCAL-00001" summary="添加sax解析xlsx文件">
       <created>1571499568622</created>
@@ -141,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571562115619</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="pom添加发布maven，但是发布不成功">
+      <created>1571577880467</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571577880467</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +163,28 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加sax解析xlsx文件" />
     <MESSAGE value="添加阿里写excel方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加阿里写excel方法" />
+    <MESSAGE value="pom添加发布maven，但是发布不成功" />
+    <option name="LAST_COMMIT_MESSAGE" value="pom添加发布maven，但是发布不成功" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/utils/ExcelReaderUtil.java</url>
+          <line>160</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/utils/ExcelReaderUtil.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/utils/ExcelReaderUtil.java</url>
+          <line>157</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

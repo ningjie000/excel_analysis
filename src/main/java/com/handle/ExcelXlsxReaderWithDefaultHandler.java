@@ -138,7 +138,7 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
 
 
     /**
-     * 是否根据第一行数据，即head数来限制读取的列数
+     * 是否根据第一行数据，即head数来限制读取的列数,默认不限制
      */
     private boolean isLimitColumnNum = false;
 
@@ -149,6 +149,13 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
     private Integer limitColumnNum = null;
 
 
+    public ExcelXlsxReaderWithDefaultHandler(boolean isLimitColumnNum){
+        this.isLimitColumnNum = isLimitColumnNum;
+    }
+
+    public ExcelXlsxReaderWithDefaultHandler(){
+        this.isLimitColumnNum = false;
+    }
 
     /**
      * 遍历工作簿中所有的电子表格
@@ -299,10 +306,26 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
                 if (maxRef != null) {
                     int len = countNullCell(maxRef, ref);
                     List<String> cell = new ArrayList<String>();
+
+                    if(limitColumnNum != null){
+                        len = limitColumnNum;
+                    }
+
                     for (int i = 0; i <= len; i++) {
                         cellList.add(curCol, "");
                         curCol++;
                     }
+
+                    if(limitColumnNum != null){
+                        /** 超过的需要删除 **/
+                        if(cellList.size() > limitColumnNum){
+                            int k = cellList.size();
+                            for(;k > limitColumnNum; k--){
+                                cellList.remove(k-1);
+                            }
+                        }
+                    }
+
                 }
 
                 //每一行数据保存至集合
@@ -311,7 +334,12 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
                     cell.add(cellList.get(i));
                 }
 
+
                 alldata.add(cell);
+
+                if(alldata.size() == 1){
+                    limitColumnNum = alldata.get(0).size();
+                }
 
                 //todo 是否保留列名// && curRow != 1
                 if (flag) { //该行不为空行且该行不是第一行，则发送（第一行为列名，不需要）
