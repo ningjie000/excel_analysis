@@ -210,7 +210,7 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
             if (preRef == null) {
                 preRef = attributes.getValue("r");
                 if(!preRef.contains("A")){
-                    preRef = "A1";
+                    preRef = "A0A1A2";
                 }
             } else {
                 preRef = ref;
@@ -466,6 +466,11 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
      * @return 当前标签和前一个标签相隔距离
      */
     public int countNullCell(String ref, String preRef) {
+        boolean flag = false;
+        if("A0A1A2".equals(preRef)){
+            preRef = "A1";
+            flag = true;
+        }
         //excel2007最大行数是1048576，最大列数是16384，最后一列列名是XFD
         String xfd = ref.replaceAll("\\d+", "");
         String xfd_1 = preRef.replaceAll("\\d+", "");
@@ -476,7 +481,7 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
         char[] letter = xfd.toCharArray();
         char[] letter_1 = xfd_1.toCharArray();
         int res = (letter[0] - letter_1[0]) * 26 * 26 + (letter[1] - letter_1[1]) * 26 + (letter[2] - letter_1[2]);
-        if(preRef.contains("A")){
+        if(flag){
             return res;
         }
 

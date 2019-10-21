@@ -154,8 +154,8 @@ public class ExcelReaderUtil {
 
 
     public static void main(String[] args) throws Exception {
-        List<List<String>> lists1 = readExcel("E:\\aaa333.xlsx");
-        List<List<String>> lists2 = readExcel("E:\\测试.xlsx");
+        List<List<String>> lists1 = readExcel("D:\\temp\\113asd.xlsx");
+        List<List<String>> lists2 = readExcel("D:\\temp\\113asd.xlsx");
 
         List<List<String>> lists = mergeExcel(lists1, lists2);
 //        System.out.println(lists);
@@ -174,7 +174,7 @@ public class ExcelReaderUtil {
         datas.addAll(lists);
         System.out.println("合并开始");
         long l = System.currentTimeMillis();
-        writeExcelXLSX("E:\\ddd1111.xlsx",heads,datas);
+        writeExcelXLSX("D:\\temp\\ddd1111bew.xlsx",heads,datas);
         long l2 = System.currentTimeMillis();
         System.out.println("合并结束,耗时 ： " + (l2-l)/1000 + "s");
     }
