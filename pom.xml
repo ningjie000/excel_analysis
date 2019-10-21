@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ning.excel</groupId>
+    <groupId>com.github.ningjie000</groupId>
     <artifactId>excel_analysis</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -35,15 +35,11 @@
 
     </dependencies>
 
-<!--    <parent>-->
-<!--        <groupId>org.sonatype.oss</groupId>-->
-<!--        <artifactId>oss-parent</artifactId>-->
-<!--        <version>7</version>-->
-<!--    </parent>-->
-
-    <name>com.gitee.sunchenbin.mybatis.actable:mybatis-enhance-actable</name>
-    <description>A.CTable is a Maven project based on Spring and Mybatis, which enhances the function of Mybatis</description>
-    <url>https://gitee.com/sunchenbin/mybatis-enhance</url>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
 
     <licenses>
         <license>
@@ -68,6 +64,7 @@
         <url>https://github.com/ningjie000/excel_analysis</url>
         <tag>master</tag>
     </scm>
+
     <distributionManagement>
         <snapshotRepository>
             <!-- 这个id需要在setting.xml中设置  -->
@@ -83,7 +80,6 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
-
 
 
 </project>

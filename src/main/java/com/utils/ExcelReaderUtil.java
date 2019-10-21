@@ -54,19 +54,6 @@ public class ExcelReaderUtil {
             }
 
 
-
-            /************* 输出流转输入流方法 *************/
-//            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-//            EasyExcel.write(baos)
-//                    // 这里放入动态头
-//                    .head(head()).excelType(ExcelTypeEnum.XLSX).sheet(1)
-//                    // 当然这里数据也可以用 List<List<String>> 去传入
-//                    .doWrite(data());
-//            long end = System.currentTimeMillis();
-//            System.out.println("耗时：" + (end -startTime) /1000);
-//
-//            InputStream swapStream = new ByteArrayInputStream(baos.toByteArray());
-
         } catch (Exception e){
             e.printStackTrace();
         } finally {
