@@ -1,5 +1,7 @@
 package com.handle;
 
+import com.alibaba.excel.util.StringUtils;
+import com.constant.ExcelConstant;
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.ss.usermodel.BuiltinFormats;
 import org.apache.poi.ss.usermodel.DataFormatter;
@@ -21,6 +23,7 @@ import java.util.List;
 
 /**
  * @author NJ
+ * @Description 本类参考互联网大佬修改，是解析xlsx核心部分
  */
 public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
 
@@ -56,11 +59,6 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
      * sheet名
      */
     private String sheetName = "";
-
-    /**
-     * 总行数
-     */
-    private int totalRows = 0;
 
     /**
      * 一行内cell集合
@@ -132,6 +130,10 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
      */
     private List<List<String>> alldata = new ArrayList<List<String>>();
 
+    /**
+     * 返回回去到的数据
+     * @return 解析的所有数据
+     */
     public List<List<String>> getAlldata() {
         return alldata;
     }
@@ -164,34 +166,83 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
      * @param filename 文件名
      * @throws Exception 异常
      */
-    public int process(String filename) throws Exception {
+    public void process(String filename) throws Exception {
         filePath = filename;
         OPCPackage pkg = OPCPackage.open(filename);
         XSSFReader xssfReader = new XSSFReader(pkg);
         stylesTable = xssfReader.getStylesTable();
         SharedStringsTable sst = xssfReader.getSharedStringsTable();
         XMLReader parser = XMLReaderFactory.createXMLReader("org.apache.xerces.parsers.SAXParser");
+        this.sst = sst;
+        parser.setContentHandler(this);
+        XSSFReader.SheetIterator sheets = (XSSFReader.SheetIterator) xssfReader.getSheetsData();
+
+        //遍历sheet
+        while (sheets.hasNext()) {
+            //标记初始行为第一行
+            curRow = 1;
+            sheetIndex++;
+
+            //sheets.next()和sheets.getSheetName()不能换位置，否则sheetName报错
+            InputStream sheet = sheets.next();
+            sheetName = sheets.getSheetName();
+            InputSource sheetSource = new InputSource(sheet);
+
+            //解析excel的每条记录，在这个过程中startElement()、characters()、endElement()这三个函数会依次执行
+            parser.parse(sheetSource);
+            sheet.close();
+        }
+    }
+
+    /**
+     * 遍历工作簿中所有的电子表格
+     * 并缓存在mySheetList中
+     *
+     * @param inputStream 输入流
+     * @throws Exception 异常
+     */
+    public void process(InputStream inputStream) throws Exception {
+
+        try {
+            OPCPackage pkg = OPCPackage.open(inputStream);
+            XSSFReader xssfReader = new XSSFReader(pkg);
+            stylesTable = xssfReader.getStylesTable();
+            SharedStringsTable sst = xssfReader.getSharedStringsTable();
+            XMLReader parser = XMLReaderFactory.createXMLReader("org.apache.xerces.parsers.SAXParser");
             this.sst = sst;
             parser.setContentHandler(this);
             XSSFReader.SheetIterator sheets = (XSSFReader.SheetIterator) xssfReader.getSheetsData();
-            while (sheets.hasNext()) { //遍历sheet
-                curRow = 1; //标记初始行为第一行
-            sheetIndex++;
-            InputStream sheet = sheets.next(); //sheets.next()和sheets.getSheetName()不能换位置，否则sheetName报错
-            sheetName = sheets.getSheetName();
-            InputSource sheetSource = new InputSource(sheet);
-            parser.parse(sheetSource); //解析excel的每条记录，在这个过程中startElement()、characters()、endElement()这三个函数会依次执行
-            sheet.close();
+
+            //遍历sheet
+            while (sheets.hasNext()) {
+                //标记初始行为第一行
+                curRow = 1;
+                sheetIndex++;
+
+                //sheets.next()和sheets.getSheetName()不能换位置，否则sheetName报错
+                InputStream sheet = sheets.next();
+                sheetName = sheets.getSheetName();
+
+                //解析excel的每条记录，在这个过程中startElement()、characters()、endElement()这三个函数会依次执行
+                InputSource sheetSource = new InputSource(sheet);
+                parser.parse(sheetSource);
+                sheet.close();
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        } finally {
+            if(inputStream != null){
+                inputStream.close();
+            }
         }
-        return totalRows; //返回该excel文件的总行数，不包括首列和空行
     }
 
     /**
      * 第一个执行
      *
-     * @param uri uri
+     * @param uri uri <worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
      * @param localName localName
-     * @param name 行name
+     * @param name name
      * @param attributes attributes xml元素
      * @throws SAXException 解析异常
      */
@@ -209,8 +260,8 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
             //前一个单元格的位置
             if (preRef == null) {
                 preRef = attributes.getValue("r");
-                if(!preRef.contains("A")){
-                    preRef = "A0A1A2";
+                if(!preRef.contains(ExcelConstant.FIRST_CONSTAINS_TAG)){
+                    preRef = ExcelConstant.DEFAULT_TAG;
                 }
             } else {
                 preRef = ref;
@@ -253,7 +304,8 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
 
     /**
      * 第三个执行
-     *
+     * 该方法主要是获取解析的cell内容，然后将所有的数据放入集合中
+     * 处理元素的格式，空值填充等可在这里处理
      * @param uri uri
      * @param localName  localName
      * @param name xml标签名
@@ -278,6 +330,7 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
             String value = this.getDataValue(lastIndex.trim(), "");//根据索引值获取对应的单元格值
             //补全单元格之间的空单元格
             if (!ref.equals(preRef)) {
+
                 //todo 计算需要修改,第一列为空的话，需要加1
                 int len = countNullCell(ref, preRef);
                 for (int i = 0; i < len; i++) {
@@ -285,22 +338,22 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
                     curCol++;
                 }
             }
-            cellList.add(curCol, value); //todo 获取单元格的值
+
+            //todo 获取单元格的值
+            cellList.add(curCol, value);
             curCol++;
+
             //如果里面某个单元格含有值，则标识该行不为空行
-            if (value != null && !"".equals(value)) {
+            if (!StringUtils.isEmpty(value)) {
                 flag = true;
             }
         } else {
-            //如果标签名称为row，这说明已到行尾，调用optRows()方法
+            //如果标签名称为row，这说明已到行尾</row>
             if ("row".equals(name)) {
                 //默认第一行为表头，以该行单元格数目为最大数目
                 if (curRow == 1) {
                     maxRef = ref;
                 }
-
-
-
 
                 //补全一行尾部可能缺失的单元格
                 if (maxRef != null) {
@@ -316,8 +369,9 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
                         curCol++;
                     }
 
+                    //这里执行通过head的列数来限制读取的列数
                     if(limitColumnNum != null){
-                        /** 超过的需要删除 **/
+                        // 超过的需要删除
                         if(cellList.size() > limitColumnNum){
                             int k = cellList.size();
                             for(;k > limitColumnNum; k--){
@@ -339,13 +393,6 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
 
                 if(alldata.size() == 1){
                     limitColumnNum = alldata.get(0).size();
-                }
-
-                //todo 是否保留列名// && curRow != 1
-                if (flag) { //该行不为空行且该行不是第一行，则发送（第一行为列名，不需要）
-                    // 调用excel读数据委托类进行读取插入操作
-//                    excelReadDataDelegated.readExcelDate(sheetIndex, totalRowCount, curRow, cellList);
-                    totalRows++;
                 }
 
                 cellList.clear();
@@ -460,14 +507,14 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
     }
 
     /**
-     * 当前标签和前一个标签相隔距离
+     * 当前标签和前一个标签相隔距离,如果两个标签中间有空值，需要进行填充处理
      * @param ref 当前标签名
-     * @param preRef 前一个标签名
-     * @return 当前标签和前一个标签相隔距离
+     * @param preRef 上一个标签名
+     * @return 当前标签和上一个标签相隔距离
      */
     public int countNullCell(String ref, String preRef) {
         boolean flag = false;
-        if("A0A1A2".equals(preRef)){
+        if(ExcelConstant.DEFAULT_TAG.equals(preRef)){
             preRef = "A1";
             flag = true;
         }
