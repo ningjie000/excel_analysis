@@ -89,7 +89,7 @@ public class ExcelReaderUtil {
     public static Boolean writeExcelXLSX(String filePath, List<List<String>> head, List<List<String>> values) throws Exception {
         long startTime = System.currentTimeMillis();
         ByteArrayOutputStream baos = null;
-        InputStream swapStream = null;
+//        InputStream swapStream = null;
         OutputStream outStream = null;
 
         try {
@@ -119,9 +119,9 @@ public class ExcelReaderUtil {
             if(outStream != null){
                 outStream.close();
             }
-            if(outStream != null){
-                swapStream.close();
-            }
+//            if(outStream != null){
+//                swapStream.close();
+//            }
             if(outStream != null){
                 baos.close();
             }

@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3a6ac9fa-ea9d-4165-a8a3-c81e49ce23c9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/constant/ExcelConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/constant/ExcelConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/ExcelReaderUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/ExcelReaderUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/constant/ExcelConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/constant/ExcelConstant.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/handle/ExcelXlsxReaderWithDefaultHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/handle/ExcelXlsxReaderWithDefaultHandler$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/handle/ExcelXlsxReaderWithDefaultHandler$CellDataType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/handle/ExcelXlsxReaderWithDefaultHandler$CellDataType.class" afterDir="false" />
@@ -27,8 +23,8 @@
       <file leaf-file-name="ExcelReaderUtil.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/utils/ExcelReaderUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="226" lean-forward="true" selection-start-line="226" selection-end-line="226" />
+            <state relative-caret-position="238">
+              <caret line="203" selection-start-line="203" selection-end-line="203" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#6585#6599#0" expanded="true" />
@@ -55,8 +51,8 @@
       <file leaf-file-name="ExcelXlsxReaderWithDefaultHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="252" selection-start-line="252" selection-end-line="252" />
+            <state relative-caret-position="228">
+              <caret line="196" column="7" lean-forward="true" selection-start-line="196" selection-start-column="7" selection-end-line="196" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1426#1434#0" expanded="true" />
@@ -71,6 +67,15 @@
                 <element signature="e#8371#8379#0" expanded="true" />
                 <element signature="e#12358#12390#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultHandler.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/org/xml/sax/helpers/DefaultHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-10496">
+              <caret line="82" column="13" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -154,9 +159,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/constant/ExcelConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/utils/ExcelReaderUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java" />
       </list>
     </option>
   </component>
@@ -381,7 +386,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571620373984</updated>
-      <workItem from="1571620375963" duration="15118000" />
+      <workItem from="1571620375963" duration="15364000" />
     </task>
     <task id="LOCAL-00001" summary="修改解析第二列为空值">
       <created>1571631532305</created>
@@ -397,11 +402,18 @@
       <option name="project" value="LOCAL" />
       <updated>1571636303209</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="修改格式">
+      <created>1571641678555</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571641678555</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15118000" />
+    <option name="totallyTimeSpent" value="15364000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -425,7 +437,7 @@
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50075644" side_tool="true" weight="0.6699187" />
       <window_info anchor="right" id="Maven Projects" weight="0.43797275" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.0699187" />
+      <window_info active="true" anchor="bottom" id="Run" order="1" sideWeight="0.5015129" side_tool="true" visible="true" weight="0.0699187" />
       <window_info anchor="bottom" id="Version Control" order="4" sideWeight="0.49924356" weight="0.3284553" />
       <window_info anchor="bottom" id="Terminal" order="5" />
       <window_info id="Capture Tool" />
@@ -433,12 +445,12 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18456884" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="BPMNPalette" />
-      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="bottom" id="Find" order="7" sideWeight="0.49924356" weight="0.0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info id="UI Designer" />
       <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="bottom" id="Debug" order="10" sideWeight="0.49924356" visible="true" weight="0.0699187" />
+      <window_info anchor="bottom" id="Debug" order="10" sideWeight="0.49848714" visible="true" weight="0.0699187" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -456,17 +468,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改解析第二列为空值" />
     <MESSAGE value="解决无法发布到maven中央仓库bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决无法发布到maven中央仓库bug" />
+    <MESSAGE value="修改格式" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改格式" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java</url>
-          <line>194</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java</url>
           <line>295</line>
@@ -485,32 +492,8 @@
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java</url>
-          <line>317</line>
-          <properties />
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java</url>
-          <line>413</line>
-          <properties />
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java</url>
-          <line>460</line>
-          <properties />
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java</url>
-          <line>252</line>
-          <properties />
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="22" />
+      <option name="time" value="23" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -568,10 +551,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/org/xml/sax/helpers/DefaultHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10496">
+          <caret line="82" column="13" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="252" selection-start-line="252" selection-end-line="252" />
+        <state relative-caret-position="228">
+          <caret line="196" column="7" lean-forward="true" selection-start-line="196" selection-start-column="7" selection-end-line="196" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1426#1434#0" expanded="true" />
@@ -589,17 +586,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/utils/ExcelReaderUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="226" lean-forward="true" selection-start-line="226" selection-end-line="226" />
+        <state relative-caret-position="238">
+          <caret line="203" selection-start-line="203" selection-end-line="203" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#6585#6599#0" expanded="true" />
