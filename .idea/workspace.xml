@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a6ac9fa-ea9d-4165-a8a3-c81e49ce23c9" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/testexcel/TestExcel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/ExcelReaderUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/ExcelReaderUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/constant/ExcelConstant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/handle/ExcelXlsxReaderWithDefaultHandler$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/handle/ExcelXlsxReaderWithDefaultHandler$CellDataType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/handle/ExcelXlsxReaderWithDefaultHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/ExcelReaderUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/excel_analysis-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -124,16 +115,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="38" lean-forward="true" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+            <state relative-caret-position="135">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestExcel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/test/com/testexcel/TestExcel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -157,6 +164,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/utils/ExcelReaderUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/handle/ExcelXlsxReaderWithDefaultHandler.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/test/com/test/TestExcel.java" />
+        <option value="$PROJECT_DIR$/src/main/test/com/testexcel/TestExcel.java" />
       </list>
     </option>
   </component>
@@ -242,14 +251,14 @@
               <item name="excel_analysis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="excel_analysis" type="b2602c69:ProjectViewProjectNode" />
               <item name="excel_analysis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -257,27 +266,9 @@
               <item name="excel_analysis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="constant" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="excel_analysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="excel_analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="handle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="excel_analysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="excel_analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="testexcel" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -292,6 +283,9 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RunDashboard">
@@ -389,7 +383,7 @@
       <workItem from="1571706624474" duration="540000" />
       <workItem from="1571809015263" duration="1482000" />
       <workItem from="1571896181846" duration="5300000" />
-      <workItem from="1571965625047" duration="1207000" />
+      <workItem from="1571965625047" duration="2612000" />
     </task>
     <task id="LOCAL-00001" summary="修改解析第二列为空值">
       <created>1571631532305</created>
@@ -419,11 +413,18 @@
       <option name="project" value="LOCAL" />
       <updated>1571641865340</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="修改上传中央仓库相关配置">
+      <created>1571980857832</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1571980857832</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25403000" />
+    <option name="totallyTimeSpent" value="26808000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -436,21 +437,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="11" sideWeight="0.16414523" weight="0.58699185" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50075644" side_tool="true" weight="0.6699187" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5015129" side_tool="true" weight="0.3284553" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.43797275" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="4" sideWeight="0.49924356" weight="0.3284553" />
       <window_info anchor="bottom" id="Run" order="1" sideWeight="0.50075644" side_tool="true" weight="0.21138212" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="5" sideWeight="0.49924356" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Terminal" order="5" sideWeight="0.49848714" visible="true" weight="0.0" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13993949" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17246597" />
       <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
       <window_info anchor="right" id="BPMNPalette" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -479,7 +481,8 @@
     <MESSAGE value="解决无法发布到maven中央仓库bug" />
     <MESSAGE value="修改格式" />
     <MESSAGE value="关流空指针" />
-    <option name="LAST_COMMIT_MESSAGE" value="关流空指针" />
+    <MESSAGE value="修改上传中央仓库相关配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改上传中央仓库相关配置" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -902,17 +905,96 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="38" lean-forward="true" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+        <state relative-caret-position="135">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/com/testexcel/TestExcel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>excel_analysis</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: cglib:cglib:3.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
