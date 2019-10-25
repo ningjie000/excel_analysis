@@ -12,10 +12,10 @@ import java.util.List;
 
 /**
  * @author NJ
- * @Description: 底层基于阿里的开源项目easyexcel
- *                 但是由于easyexcel自己提供的解析，如果字段中出现空字段，会出现格式乱掉的情况
- *                 所以在读取的时候我采用sax解析xlsx文件，用为xlsx文件解压后为xml文件
- *                 ExcelXlsxReaderWithDefaultHandler构造方法传参true 或者 false，
+ *  底层基于阿里的开源项目easyexcel
+ *        但是由于easyexcel自己提供的解析，如果字段中出现空字段，会出现格式乱掉的情况
+ *        所以在读取的时候我采用sax解析xlsx文件，用为xlsx文件解压后为xml文件
+ *        ExcelXlsxReaderWithDefaultHandler构造方法传参true 或者 false，
  *                     如果传入true 则会通过第一行，即head的列数来限制字段，多了的不读，少了的补空占位
  *                     如果是false，按照正常格式读取，每行列数可以不定
  */
@@ -26,7 +26,7 @@ public class ExcelReaderUtil {
      * @param filePath  文件地址
      * @param isLimitColumnNum 是否更具head的列数来限制读取的cell的列数
      * @return 所有数据，包括head和cell
-     * @throws Exception
+     * @throws Exception 异常
      */
     public static List<List<String>> readExcel(String filePath, Boolean isLimitColumnNum) throws Exception {
         List<List<String>> alldata = null;
@@ -52,7 +52,7 @@ public class ExcelReaderUtil {
      * @param inputStream  输入的文件流
      * @param isLimitColumnNum 是否更具head的列数来限制读取的cell的列数
      * @return 所有数据，包括head和cell
-     * @throws Exception
+     * @throws Exception 异常
      */
     public static List<List<String>> readExcel(InputStream inputStream, Boolean isLimitColumnNum) throws Exception {
         List<List<String>> alldata = null;
@@ -81,10 +81,10 @@ public class ExcelReaderUtil {
     /**
      * 将数据写入到excel中
      * @param filePath filePath输出文件地址
-     * @param head
-     * @param values
-     * @return
-     * @throws Exception
+     * @param head excel的head
+     * @param values excel中每行的值
+     * @return true执行成功
+     * @throws Exception 异常
      */
     public static Boolean writeExcelXLSX(String filePath, List<List<String>> head, List<List<String>> values) throws Exception {
         long startTime = System.currentTimeMillis();
@@ -134,7 +134,7 @@ public class ExcelReaderUtil {
      * 合并两张表格数据
      * @param excelOne 表格1
      * @param excelTwo 表格2
-     * @return
+     * @return 合并后的数据
      */
     public static List<List<String>> mergeExcel(List<List<String>> excelOne, List<List<String>> excelTwo){
         List<List<String>> result = new ArrayList<List<String>>();

@@ -23,7 +23,7 @@ import java.util.List;
 
 /**
  * @author NJ
- * @Description 本类参考互联网大佬修改，是解析xlsx核心部分
+ * 本类参考互联网大佬修改，是解析xlsx核心部分
  */
 public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
 
@@ -240,7 +240,7 @@ public class ExcelXlsxReaderWithDefaultHandler extends DefaultHandler {
     /**
      * 第一个执行
      *
-     * @param uri uri <worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
+     * @param uri uri xml头
      * @param localName localName
      * @param name name
      * @param attributes attributes xml元素
